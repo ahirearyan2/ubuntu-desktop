@@ -17,7 +17,7 @@ RUN \
 WORKDIR /data
 
 # Define default command.
-CMD ["bash"]
+CMD vncserver :1 -geometry 1280x800 -depth 24 && tail -F /root/.vnc/*.log
 
 # Expose ports.
 EXPOSE 5901
